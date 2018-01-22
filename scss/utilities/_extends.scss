@@ -1,0 +1,88 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Nav Items
+
+%nav-item-horz {
+    
+    margin-top: em(20px);
+  margin-bottom: em(30px); 
+  text-align: left; 
+  display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  @include mq(medium) {
+           flex-direction: row;
+           padding-right: 3%;
+              }
+}
+
+%nav-item-link {
+  font-weight: $font-weight--medium;
+  text-align: center;
+  font-size: em(18px);
+    color: $grey; 
+    text-decoration: none;
+  display: block;
+  padding: em(8px, 12px);
+ margin: 0;
+ }
+
+%nav-item-on {
+  color: palette(black);
+  background-color: $emerald;
+}
+
+// Headlines
+
+%hdln-prim {
+  color: $emerald;
+  font-weight: $font-weight--bold;
+  font-size: em(42px);
+  line-height: (46px/42px);
+  margin-top: 0;
+   margin-left: em(10px);
+    margin-bottom: em(26px);
+}
+%hdln-sec {
+    display:block;
+    margin-top: em(26px);
+  margin-bottom: em(36px);
+  color: palette(grey, light);
+    text-transform: uppercase;
+  letter-spacing: $letter-space;
+  font-weight: $font-weight--medium;
+  font-size: em(14px);
+  }
+
+// Buttons
+
+%btn {
+  padding: 16px;
+  margin-bottom: em(20px);
+  border: 0;
+  border-radius : $br--default;
+  color: $white;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+   width: 100%;
+    
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+// Icons
+
+%icn--ui {
+	line-height: 0;
+	cursor: pointer;
+}
+
+

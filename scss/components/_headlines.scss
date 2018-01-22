@@ -1,0 +1,25 @@
+// ==========================================================================
+// Headlines
+// ==========================================================================
+
+.headline--primary 
+{
+  color: $emerald;
+  font-weight: 700;
+  font-size: 2.625em;
+  line-height: 1.0952380952;
+  margin-top: 0; 
+  margin-left: 0.625em;
+    margin-bottom: 1.6666666667em;
+    
+}
+.headline--secondary {
+    display:block;
+  margin-top: 1.5714285714em;
+  margin-bottom: 2.2857142857em;
+  color: #d6d7d9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 0.875em; 
+ }

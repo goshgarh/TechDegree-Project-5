@@ -1,0 +1,25 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn {
+	@include bg-colors($ui-colors);
+}
+
+[class^="btn--"] {
+  
+  @extend %btn;
+    
+  @include mq(medium) { 
+    width: 15%;
+      margin-left: 4%;
+      text-align: center;
+        
+  }
+}
+@include mq(medium) { 
+      .form .btn--default {
+          width: 100%;
+          margin-left: 0;
+        }  
+}
