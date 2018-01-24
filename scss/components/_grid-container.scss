@@ -3,60 +3,42 @@
 // ==========================================================================
 
 .grid__row {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
+    @include flex_grid_row;
     }
 
 .grid__col--12.theme__colors {
-    background-color: #00ff99;
-      border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol12;
+     @include grid_col;
      }
 
 .grid__col--6.theme__colors {
-    background-color: #66c2ff;
-    border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol6;
+    @include grid_col;
     }
 
 .grid__col--4.theme__colors {
-    background-color: #00ccff;
-    border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol4;
+    @include grid_col;
     }
 .grid__col--3.theme__colors {
-    background-color: #ff00ff;
-    border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol3;
+   @include grid_col;
     }
 .grid__col--5.theme__colors {
-    background-color: #33cc33;
-    border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol5;
+   @include grid_col;
     }
 .grid__col--7.theme__colors {
-    background-color: #e6ac00;
-    border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol7;
+    @include grid_col;
     }
 .grid__col--8.theme__colors {
-    background-color: #ff99dd;
-    border-radius: 0.4em;
-    text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol8;
+    @include grid_col;
     }
 .centered.grid__col--7 {
-    background-color: #e6ac00;
-    border-radius: 0.4em;
-   text-align: center;
-    padding: 0.5em;
+    background-color: $gridcol7;
+    @include grid_col;
     }
 
     [class^="grid__col--"] {
@@ -66,48 +48,23 @@
          
 }      
 
-@media (min-width: 769px) {
+@include mq(medium) {
     
     .grid__row {
         flex-direction: row;
              }
-        
-/*
-  .grid__col--1 {
-    width: 6.5%; }
-*/
-/*
-  .grid__col--2 {
-    width: 15%; }
-*/
-  .grid__col--3 {
-    width: 23.5%; }
-  .grid__col--4 {
-    width: 32%; }
-  .grid__col--5 {
-    width: 40.5%; }
-  .grid__col--6 {
-    width: 49%; }
-  .grid__col--7 {
-    width: 57.5%; }
-  .grid__col--8 {
-    width: 66%; }
-  .grid__col--9 {
-    width: 74.5%; }
-  .grid__col--10 {
-    width: 83%; }
-  .grid__col--11 {
-    width: 91.5%; }
-  .grid__col--12 {
-    width: 100%; } 
-       
 
-    [class^="grid__col--"] + [class^="grid__col--"] {
-      margin-left: 2%; }
-        
+    .grid__col {
+   
+    @include g-columns; 
+  }
+
+     [class^="grid__col--"] {
+         @include doubly(2%);
+       }
+            
         } 
 
 /* end of @media (min-width: 769px) */
-
 
 

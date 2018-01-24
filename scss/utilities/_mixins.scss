@@ -15,6 +15,23 @@
   }
 }
 
+@mixin grid_col {
+     border-radius: 0.4em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+@mixin flex_nav {
+    @extend %nav-item-horz;
+}
+
+@mixin flex_grid_row {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
 // Media queries
 
 @mixin mq($break) {
@@ -40,35 +57,7 @@
 	}
 }
 
-// Generating :before or :after pseudo-element shapes
 
-//@mixin p-el(
-//	$el,
-//	$el-w: null,
-//	$el-h: null) {
-//	@if $el == "before" or $el == "after" { 
-//	  &:#{$el} {
-//		  @extend %pseudos;
-//		  width: $el-w;
-//	  	height: $el-h;
-//	    @content;
-//	  }
-//	} 
-//	@else {
-//    @error "`#{$el}` is not a valid pseudo-element.";
-//	}
-//}
-
-// Image replacement
-
-@mixin img-replace($img, $w, $h, $disp: block) {
-	background-image: url('#{$path--rel}/#{$img}');
-	background-repeat: no-repeat;
-	width: $w;
-	height: $h;
-	display: $disp;
-}
-      
 // Adjacent sibling margins
 
 @mixin doubly($margin: 1em) {
